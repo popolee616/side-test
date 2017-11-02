@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/osboxes/Documents/ECE650/side-test/proc.cpp
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+signal.h
+-
+iostream
+-
+sys/types.h
+-
+

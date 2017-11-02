@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall    CMakeFiles/proc.dir/proc.cpp.o  -o proc -rdynamic 

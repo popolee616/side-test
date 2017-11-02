@@ -1,0 +1,2 @@
+/home/osboxes/Documents/ECE650/side-test/build/run/bin/ece650-a2
+/home/osboxes/Documents/ECE650/side-test/build/run/bin/proc

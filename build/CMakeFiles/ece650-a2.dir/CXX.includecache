@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/osboxes/Documents/ECE650/side-test/ece650-a2.cpp
+iostream
+-
+vector
+-
+list
+-
+queue
+-
+unordered_map
+-
+sstream
+-
+string
+-
+algorithm
+-
+stdio.h
+-
+cstdio
+-
+

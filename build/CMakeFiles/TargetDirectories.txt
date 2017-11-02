@@ -1,0 +1,8 @@
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/install.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/list_install_components.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/rebuild_cache.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/ece650-a2.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/edit_cache.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/install/strip.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/proc.dir
+/home/osboxes/Documents/ECE650/side-test/build/CMakeFiles/install/local.dir

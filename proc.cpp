@@ -17,12 +17,11 @@ int main() {
 		dup2(BtoC[1], STDOUT_FILENO);
 		close(BtoC[0]);
 		close(BtoC[1]);
-				
-		Input input;
-		input.get_input();
-		
+		execv("ece650-a2", nullptr);		
+		perror("Error: during finding ece650-a2 in proc");
+		return 1;		
 	
-	else {
+	}else {
 		dup2(BtoC[0], STDIN_FILENO);
 		close(BtoC[1]);
 		close(BtoC[0]);
@@ -33,7 +32,7 @@ int main() {
 			if (line.size () > 0)
 				std::cout << line << std::endl;
 		}
-	}
+	} 
 	
 	return 0;
 	
