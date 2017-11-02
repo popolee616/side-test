@@ -18,13 +18,18 @@ int main(void) {
     unsigned random_value = 42;
     unsigned num=0;
     int time = 26;
-
-    while （time >0） {
+	static const char alphanum[] =
+        " "
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz";
+    char *s;
+	for （int i=0; i<15; i++） {
         urandom.read((char*)&random_value, sizeof(random_value));
-        num = minn + (random_value % (maxn-minn+1));
-        std::cout << "ASCII a: " << static_cast<char>(num) << "\n";
-        time--;
+        num = random_value % (sizeof(alphanum)-1);
+        s[i] = alphanum[num];
     }
+	std::cout << "ASCII a: " << s << "\n";
+
     // cast to integer to see the numeric value of the character
 //    std::cout << "Random character: " << (unsigned int)ch << "\n";
 //    std::cout << "ASCII Random character: " << static_cast<char>((unsigned int)ch) << "\n";
