@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/osboxes/Documents/ECE650/side-test/using_pipe.cpp
+sys/types.h
+-
+stdio.h
+-
+stdlib.h
+-
+vector
+-
+unistd.h
+-
+signal.h
+-
+iostream
+-
+

@@ -6,5 +6,6 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/run)
 
 add_executable(ece650-a2 ece650-a2.cpp)
 add_executable(proc proc.cpp)
+add_executable(using_pipe using_pipe.cpp)
 
 install(TARGETS ece650-a2 proc RUNTIME DESTINATION bin)

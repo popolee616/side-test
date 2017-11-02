@@ -43,4 +43,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ece650-a2.dir/DependInfo.cmake"
   "CMakeFiles/proc.dir/DependInfo.cmake"
+  "CMakeFiles/using_pipe.dir/DependInfo.cmake"
   )

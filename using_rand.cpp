@@ -18,8 +18,11 @@ int main(void) {
     char ch = 'a';
     urandom.read(&ch, 1);
     // cast to integer to see the numeric value of the character
+    std::cout << "Random character: " << ch << "\n";
     std::cout << "Random character: " << (unsigned int)ch << "\n";
-
+    std::cout << "ASCII character: " << static_cast<char>((unsigned int)ch) << "\n";
+    std::cout << "ASCII a: " << static_cast<char>(65) << "\n";
+    std::cout << "ASCII Z: " << static_cast<char>(122) << "\n";
     // read another 8-bit value
     urandom.read(&ch, 1);
     std::cout << "Random character: " << (unsigned int)ch << "\n";

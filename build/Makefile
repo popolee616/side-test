@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/osboxes/Documents/ECE650/side-test/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -110,6 +98,18 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -180,6 +180,19 @@ proc/fast:
 	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/build
 .PHONY : proc/fast
 
+#=============================================================================
+# Target rules for targets named using_pipe
+
+# Build rule for target.
+using_pipe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 using_pipe
+.PHONY : using_pipe
+
+# fast build rule for target.
+using_pipe/fast:
+	$(MAKE) -f CMakeFiles/using_pipe.dir/build.make CMakeFiles/using_pipe.dir/build
+.PHONY : using_pipe/fast
+
 ece650-a2.o: ece650-a2.cpp.o
 
 .PHONY : ece650-a2.o
@@ -234,19 +247,47 @@ proc.cpp.s:
 	$(MAKE) -f CMakeFiles/proc.dir/build.make CMakeFiles/proc.dir/proc.cpp.s
 .PHONY : proc.cpp.s
 
+using_pipe.o: using_pipe.cpp.o
+
+.PHONY : using_pipe.o
+
+# target to build an object file
+using_pipe.cpp.o:
+	$(MAKE) -f CMakeFiles/using_pipe.dir/build.make CMakeFiles/using_pipe.dir/using_pipe.cpp.o
+.PHONY : using_pipe.cpp.o
+
+using_pipe.i: using_pipe.cpp.i
+
+.PHONY : using_pipe.i
+
+# target to preprocess a source file
+using_pipe.cpp.i:
+	$(MAKE) -f CMakeFiles/using_pipe.dir/build.make CMakeFiles/using_pipe.dir/using_pipe.cpp.i
+.PHONY : using_pipe.cpp.i
+
+using_pipe.s: using_pipe.cpp.s
+
+.PHONY : using_pipe.s
+
+# target to generate assembly for a file
+using_pipe.cpp.s:
+	$(MAKE) -f CMakeFiles/using_pipe.dir/build.make CMakeFiles/using_pipe.dir/using_pipe.cpp.s
+.PHONY : using_pipe.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ece650-a2"
 	@echo "... edit_cache"
 	@echo "... install/strip"
 	@echo "... proc"
+	@echo "... install"
+	@echo "... using_pipe"
 	@echo "... install/local"
 	@echo "... ece650-a2.o"
 	@echo "... ece650-a2.i"
@@ -254,6 +295,9 @@ help:
 	@echo "... proc.o"
 	@echo "... proc.i"
 	@echo "... proc.s"
+	@echo "... using_pipe.o"
+	@echo "... using_pipe.i"
+	@echo "... using_pipe.s"
 .PHONY : help
 
 

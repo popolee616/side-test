@@ -19,9 +19,10 @@ int main(void) {
     unsigned num=0;
     int time = 26;
 
-    while （time >0） {
+    while (time >0) {
         urandom.read((char*)&random_value, sizeof(random_value));
         num = minn + (random_value % (maxn-minn+1));
+	std::cout << "ASCII num: " << num <<"\n";
         std::cout << "ASCII a: " << static_cast<char>(num) << "\n";
         time--;
     }

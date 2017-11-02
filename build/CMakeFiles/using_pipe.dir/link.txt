@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall    CMakeFiles/using_pipe.dir/using_pipe.cpp.o  -o using_pipe -rdynamic 
